@@ -1,0 +1,29 @@
+name: '${project.name}'
+version: '${project.version}'
+authors: ${authors}
+website: '${project.url}'
+main: net.nightzy.echestplus.EChestPlusPlugin
+api-version: '${apiVersion}'
+description: ${project.description}
+
+commands:
+  ec:
+    description: Otwiera EnderChest gracza.
+    aliases: [enderchest]
+    usage: /<command>
+    permission: echestplus.ec
+    permission-message: Nie masz uprawnień, aby użyć tej komendy.
+
+  nightzyec:
+    description: Zarządzanie pluginem EnderChest (administracja).
+    aliases: [nightzyenderchest]
+    usage: /<command> reload
+    permission: echestplus.admin
+    permission-message: Nie masz uprawnień, aby użyć tej komendy.
+
+  adminec:
+    description: Komendy administracyjne do zarządzania EnderChest graczy.
+    aliases: [adminenderchest]
+    usage: /<command> [getitem|open|size] [gracz] [wielkość]
+    permission: echestplus.admin
+    permission-message: Nie masz uprawnień, aby użyć tej komendy.
