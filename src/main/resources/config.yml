@@ -1,3 +1,5 @@
+langType: en_EN
+
 basteType: SQLite
 
 # MYSQL -> Przykład: jdbc:mysql://<user>:<password>@<adress>:<port>/<base_name>

@@ -1,29 +1,20 @@
 name: '${project.name}'
 version: '${project.version}'
-authors: ${authors}
+authors: [Nightzy.net]
 website: '${project.url}'
 main: net.nightzy.echestplus.EChestPlusPlugin
 api-version: '${apiVersion}'
 description: ${project.description}
 
 commands:
-  ec:
-    description: Otwiera EnderChest gracza.
-    aliases: [enderchest]
-    usage: /<command>
-    permission: echestplus.ec
-    permission-message: Nie masz uprawnień, aby użyć tej komendy.
+  ecreload:
+    description: Reload the plugin configuration.
+    usage: /ecreload
+    permission: echestplus.reload
+    permission-message: You do not have permission to use this command.
 
-  nightzyec:
-    description: Zarządzanie pluginem EnderChest (administracja).
-    aliases: [nightzyenderchest]
-    usage: /<command> reload
-    permission: echestplus.admin
-    permission-message: Nie masz uprawnień, aby użyć tej komendy.
-
-  adminec:
-    description: Komendy administracyjne do zarządzania EnderChest graczy.
-    aliases: [adminenderchest]
-    usage: /<command> [getitem|open|size] [gracz] [wielkość]
-    permission: echestplus.admin
-    permission-message: Nie masz uprawnień, aby użyć tej komendy.
+  eclang:
+    description: Change the plugin language.
+    usage: /eclang <langCode>
+    permission: echestplus.lang
+    permission-message: You do not have permission to use this command.

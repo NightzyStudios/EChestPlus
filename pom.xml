@@ -6,7 +6,7 @@
 
     <groupId>net.nightzy</groupId>
     <artifactId>EChestPlus</artifactId>
-    <version>0.1-Prerelease</version>
+    <version>0.1-Prerelease.2</version>
     <name>EChestPlus</name>
 
     <properties>
@@ -14,7 +14,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.build.timestamp.format>yyyy-MM-dd HH.mm</maven.build.timestamp.format>
-        <authors>[Drago &lt;drago.klaudiusz@gmail.com&gt;]</authors>
         <apiVersion>1.21</apiVersion>
         <project.url>https://nightzy.net</project.url>
         <project.description>Advanced EnderChest plugin for Minecraft</project.description>
