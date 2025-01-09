@@ -1,11 +1,10 @@
 package net.nightzy.echestplus.commands;
 
 import net.nightzy.echestplus.EChestPlusPlugin;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
-import org.bukkit.command.CommandExecutor;
 
-import java.util.logging.Level;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
 
 public class EcReloadCommand implements CommandExecutor {
 
@@ -17,22 +16,16 @@ public class EcReloadCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (command.getName().equalsIgnoreCase("ecreload")) {
-            if (!sender.hasPermission("echestplus.reload")) {
-                // Komunikat o braku uprawnień zależny od języka
-                sender.sendMessage(plugin.getLangMessage("no_permission"));
-                return true;
-            }
-
-            // Reload config
-            plugin.reloadConfig();
-            // Komunikat o przeładowaniu konfiguracji zależny od języka
-            sender.sendMessage(plugin.getLangMessage("config_reloaded"));
-
-            // Log reload action
-            plugin.getLogger().log(Level.INFO, "Configuration reloaded by " + sender.getName());
+        if (!sender.hasPermission("echestplus.reload")) {
+            sender.sendMessage(plugin.getLangManager().getLangController().getMessage("no_permission"));
             return true;
         }
-        return false;
+
+        plugin.getConfig().options().copyDefaults(true);
+        plugin.saveConfig();
+        plugin.getLangManager().loadLangConfig();
+
+        sender.sendMessage(plugin.getLangManager().getLangController().getMessage("config_reloaded"));
+        return true;
     }
 }

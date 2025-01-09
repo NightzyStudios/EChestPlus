@@ -4,17 +4,10 @@ authors: [Nightzy.net]
 website: '${project.url}'
 main: net.nightzy.echestplus.EChestPlusPlugin
 api-version: '${apiVersion}'
-description: ${project.description}
 
 commands:
   ecreload:
     description: Reload the plugin configuration.
     usage: /ecreload
     permission: echestplus.reload
-    permission-message: You do not have permission to use this command.
-
-  eclang:
-    description: Change the plugin language.
-    usage: /eclang <langCode>
-    permission: echestplus.lang
     permission-message: You do not have permission to use this command.

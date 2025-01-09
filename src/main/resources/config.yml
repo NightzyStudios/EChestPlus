@@ -1,22 +1,17 @@
+# Currently, the supported languages are: pl_PL and en_US
 langType: en_EN
 
 basteType: SQLite
 
-# MYSQL -> Przykład: jdbc:mysql://<user>:<password>@<adress>:<port>/<base_name>
-# MONGODB -> Przykład: mongodb+srv://<db_username>:<dbpassword>@<adress>/?retryWrites=true@w=majorty@appName=<cluster>
-# SQLite -> Przykład: jdbc:sqlite:plugins/EChestPlus/enderchest.db
+# MYSQL -> Example: jdbc:mysql://<user>:<password>@<adress>:<port>/<base_name>
+# MONGODB -> Example: mongodb+srv://<db_username>:<dbpassword>@<adress>/?retryWrites=true@w=majorty@appName=<cluster>
+# SQLite -> Example: jdbc:sqlite:plugins/EChestPlus/enderchest.db
 databaseConnectionUri: jdbc:sqlite:plugins/EChestPlus/enderchest.db
 
-# EnderChest GUI Name
-
-enderChestName: <gradient:#086BFB:#4385FF>Twój EnderChest</gradient>
-
 # EnderChest Size
-
 enderChestSize: 27
 
 # Item look
-
 upgraderItem:
   - ItemStack:
       material: LEGACY_PAPER
@@ -35,12 +30,3 @@ upgraderItem:
         flags:
           - HIDE_ENCHANTS
     modelData: 1
-
-# Messages
-
-fullEnderChest:
-  messageType: Chat
-  message: <red>Posiadasz już maksymalne ulepszenie <dark_red>EnderChesta!
-upgraded:
-  messageType: TITTLE_SUBTITLE
-  message: <b><gradient:#086BFB:#4385FF>EnderChest</gradient><b>\n<white>Ulepszono enderchestna <#4385FF><size> slotów
